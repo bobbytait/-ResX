@@ -200,9 +200,14 @@ namespace _ResX
             }
         }
 
-        public static class Results
+        public static int GetResultsCount(CompareResult compareResult)
         {
+            return (GetDataView(compareResult).Count);
+        }
 
+        public static DataView GetResults(CompareResult compareResult)
+        {
+            return (GetDataView(compareResult));
         }
     }
 }
